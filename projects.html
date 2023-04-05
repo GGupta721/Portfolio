@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/projects.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/444d14759d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&family=Roboto&family=Roboto+Mono:ital,wght@0,100;0,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Projects Page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" aria-label="main navigation">
+            <div class="portfolio-logo">
+                <a class="nav-text" href="./index.html">GG</a> 
+            </div>  
+            <div class="nav-menu">
+                <a class="nav-text" href="./projects.html">Projects</a> 
+                <a class="nav-text" href="./index.html">About Me</a> 
+            </div>
+        
+        </nav>
+    </header>
+    <main>
+        <div class="project-header">
+            <h1>
+                Playground: Online learning and meeting hub
+            </h1>
+            <h3>
+                AWS Serverless Application | CMPT 474 - Web Systems Architecture 
+            </h3>
+            
+            <ul class="team-members">
+                <li class="bold">Members:</li>
+                <li>Ivan Vuckovic</li>
+                <li>Josie Buter</li>
+                <li>Saqib Hasib</li>
+                <li>Gaurav Gupta</li>
+                <li>Farhan Chandel</li>
+            </ul>
+        </div>
+
+        <div class="project-description">
+
+            <div class="demo">
+                <div class="project-introduction"> 
+                    <h2>Description:</h2>
+                    <p>Social anxiety and isolation have been at an all time high due to the recent pandemic. Many kids, teens, and adults already battling depression, and other mental issues are now facing an exponentially higher risk. To battle against this global struggle, you can safely meet with users in our online playground where Common interests like books, classes, tv shows etc. can be discussed in a room with other interested users.</p>
+                </div>
+                <div class="images-grid">
+                    <div>
+                        <img src="img/playgroundlandingpage.jpg" alt="A picture of the project's landing page" width="300" height="200">
+                    </div>
+                    <div>
+                        <img src="img/loginpage.jpg" alt="A picture of the project's login page" width="300" height="200">
+                    </div>
+                    <div>
+                        <img src="img/chatlooby-mainpage.jpeg" alt="A picture of the project's home page" width="300" height="200">
+                    </div>
+                    <div>
+                        <img src="img/chatlobbymessages.png" alt="A picture of the project's main chat lobby feature" width="300" height="200">
+                    </div>
+
+
+                </div>
+                <div>
+                    <p></p>
+                </div>
+
+            </div>
+            <div class="architecture">
+                <div>
+                    <h2>System Design:</h2>
+                </div>
+                <div class="design">
+                    <div class="architecture-img">
+                        <img src="img/architecture.png" alt="A picture of the project's architecture" width="300" height="200">
+                    </div>
+                    <div class="architecture-text">
+                        <p>We used AWS Amplify to deploy standard HTML/JS/CSS front end.</p> 
+                        <p>The Chat Microservice uses AWS Websocket API to enable chat functionality between the multiple clients. We used two DynamoDB databases. One is keeping track of open socket connections for broadcasting purposes and the other one for the message history. We also used Lambda functions for adding/disconnecting clients, adding new messages to the databases. The lambda functions use Python.</p>
+                        <p>The Profile Microservice uses Rest API to enable the storage and retrieval of user profile data. It uses two Lambda functions. One for setting user information on signup & another for etting user information for chat purposes and profile page. It also uses a DynamoDB database for storing user data that is not stored within AWS Cognito user pool. The lambda functions use Python.</p>
+                        <p>AWS Cognito is used for creation of new users in the User Pool and providing authentication. It requires email-id and name for creating a new user and also uses email-id verification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-conclusion">
+            <div>
+                <h2>Technologies Used:</h2>
+                <p>
+        
+                    AWS Amplify was chosen to deploy the front-end static resources, as it is flexible and will
+                    facilitate our plan for further development in the next iteration. AWS Cognito was used to
+                    provide authentication and user services. It allows for easy integration with the app and makes a
+                    secure and scalable user directory. The web application was deployed as a serverless
+                    application using AWS Lambda for the compute service, and store or get necessary information
+                    from DynamoDB. We chose DynamoDB over Amazon Keyspaces because even though
+                    Amazon Keyspaces is more scalable, it has poor performance for inserting single records which
+                    is required throughout the app.
+                </p>
+            </div>
+            <div>
+                <h2>Reflection:</h2>
+                <p>Our team again held regular meetings to provide check ins on each person's individual
+                    progress. When researching technology options for the different components of our system our team
+                    looked through AWS documentation and blogs on best practices for our use case. When we
+                    needed to clarify any of the project components we also reached out to the TA’s for assistance
+                    and guidance.                    
+                    
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="contact-me">
+            <div>
+                <h2>Let's Connect</h2>
+            </div>
+            <div class="contact-me-items">
+                <div>
+                    <a href="https://github.com/GGupta721">
+                        <img src="img/icons8-github-250.png" alt="github logo" width="100" height="100">
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/guptagaurav21/"> 
+                        <img src="img/icons8-linkedin-250.png" alt="linkdin logo" width="100" height="100">
+                    </a>
+                </div>
+                <div class="email">
+                    <a href="mailto:ggupta@sfu.ca"> 
+                        <img src="img/icons8-mail-250.png" alt="email logo" width="100" height="100">
+                    </a>
+                    
+
+                </div>
+            </div>
+            
+
+        </div>
+
+    </footer>
+    
+</body>
+
+</html>
